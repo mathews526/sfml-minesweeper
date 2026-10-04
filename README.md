@@ -22,11 +22,11 @@ A GUI-based implementation of the classic puzzle game Minesweeper, built in C++ 
 ## Architecture
 
 Built with an object-oriented design in C++, separating game logic, rendering, and resource management across dedicated classes:
-- `Board:` manages the grid of tiles, mine placement, reveal/flag logic, and win/loss conditions
-- `Tile:` represents a single cell's state (mine, flagged, revealed, adjacent mine count) and rendering
-- `Buttons:` UI buttons including the reset face and debug tools
-- `Counter:` tracks and displays the remaining mine count
-- `TextureManager:` handles loading and sharing of sprite textures
+- `Board`: manages the grid of tiles, mine placement, reveal/flag logic, and win/loss conditions
+- `Tile`: represents a single cell's state (mine, flagged, revealed, adjacent mine count) and rendering
+- `Buttons`: UI buttons including the reset face and debug tools
+- `Counter`: tracks and displays the remaining mine count
+- `TextureManager`: handles loading and sharing of sprite textures
 
 ## How to Run
 
