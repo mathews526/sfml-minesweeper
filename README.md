@@ -32,7 +32,7 @@ Built with an object-oriented design in C++, separating game logic, rendering, a
 
 1. Clone the repo
 2. Open the project in Visual Studio
-3. Make sure SFML is linked (see [SFML setup docs](https://www.sfml-dev.org/tutorials/2.5/start-vc.php) if needed)
+3. Make sure SFML is linked (see [SFML 2.5 setup docs](https://www.sfml-dev.org/tutorials/2.5/start-vc.php) if needed)
 4. Build and run
 
 ## License
