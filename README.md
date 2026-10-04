@@ -1,7 +1,7 @@
 # SFML Minesweeper
 A GUI-based implementation of the classic puzzle game Minesweeper, built in C++ using SFML (Simple and Fast Multimedia Library).
 
-<img width="790" height="642" alt="Minesweeper Demo Gif" src="https://github.com/user-attachments/assets/8cc16414-01b2-4ba1-9b0c-6a54d970c2c6" />
+<img width="450" alt="Minesweeper Demo Gif" src="https://github.com/user-attachments/assets/8cc16414-01b2-4ba1-9b0c-6a54d970c2c6" />
 
 ## Features
 
