@@ -8,7 +8,7 @@ A GUI-based implementation of the classic puzzle game Minesweeper, built in C++ 
 - **Flood-fill reveal:** clicking an empty tile cascades to reveal all connected safe tiles
 - **Flagging system:** right-click to flag suspected mines, with a live counter showing mines remaining
 - **Game State Management:** clicking a mine ends the game and reveals the full board; clearing all safe tiles wins
-- **Configurable board setup:** — board dimensions and mine count are read from configuration data and used to dynamically render the grid, rather than hardcoding a fixed layout
+- **Configurable board setup:** board dimensions and mine count are read from configuration data and used to dynamically render the grid, rather than hardcoding a fixed layout
 - **Randomized board:** mine layout is shuffled every game
 - **Reset button:** the smiley face resets the board and tracks game state (happy / win / lose)
 - **Debug tools:** built-in buttons to reveal all mines or load preset board layouts, for faster manual testing during development
