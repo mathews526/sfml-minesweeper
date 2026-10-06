@@ -53,7 +53,7 @@ void Board::MousePress(float& x, float& y)
 				}
 				else if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
 				{
-					if (tile.Contains(x, y))
+					if (tile.Contains(x, y) && !tile.IsRevealed())
 					{
 						tile.ToggleFlag();
 
