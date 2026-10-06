@@ -15,6 +15,7 @@ class Board
 	int _remainingMines;
 	bool _gameLost;
 	bool _gameWon;
+	bool _isFirstClick;
 	vector<vector<Tile>> _tiles;
 public:
 	/*==== Constructor ====*/
@@ -38,7 +39,7 @@ public:
 	void CreateBoard();
 	void LoadBoardFromFile(const string& filePath);
 	void DrawTiles(sf::RenderWindow& window);
-	void PlaceMines();
+	void PlaceMines(int firstRow, int firstCol);
 	void SetAdjacentTiles();
 
 	/*==== Accessors ====*/

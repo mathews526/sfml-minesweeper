@@ -7,13 +7,11 @@
 using namespace std;
 
 /*==== Constructor ====*/
-Board::Board(const string& filePath) : _gameLost(false), _gameWon(false)
+Board::Board(const string& filePath) : _gameLost(false), _gameWon(false), _isFirstClick(true)
 {
 	ifstream configFile(filePath);
 	Deserialize(configFile);
 	CreateBoard();
-	PlaceMines();
-	SetAdjacentTiles();
 }
 
 /*==== Behavior Functions ====*/
@@ -30,6 +28,13 @@ void Board::MousePress(float& x, float& y)
 				{
 					if (tile.Contains(x, y) && !tile.HasFlag())
 					{
+						if (_isFirstClick)
+						{
+							PlaceMines(row, col);
+							SetAdjacentTiles();
+							_isFirstClick = false;
+						}
+						
 						tile.Reveal();
 
 						if (tile.HasMine())
@@ -93,15 +98,13 @@ void Board::ResetBoard(const string& filePath)
 	_remainingMines = _numMines;
 	_gameLost = false;
 	_gameWon = false;
+	_isFirstClick = true;
 
 	for (unsigned int row = 0; row < _tiles.size(); row++)
 	{
 		for (unsigned int col = 0; col < _tiles[row].size(); col++)
 			_tiles[row][col].Reset();
 	}
-
-	PlaceMines();
-	SetAdjacentTiles();
 }
 void Board::DebugRevealMines()
 {
@@ -215,6 +218,7 @@ void Board::LoadBoardFromFile(const string& filePath)
 		for (unsigned int col = 0; col < _tiles[row].size(); col++)
 			_tiles[row][col].Reset();
 	}
+	_isFirstClick = false; // Custom boards already have fixed mine placements
 
 	string lineFromFile;
 	int row = 0;
@@ -264,18 +268,19 @@ void Board::DrawTiles(sf::RenderWindow& window)
 		}
 	}
 }
-void Board::PlaceMines()
+void Board::PlaceMines(int firstRow, int firstCol)
 {
 	int minesPlaced = 0;
 	while (minesPlaced < _numMines)
 	{
 		int row = Random::Int(0, _numRows - 1);
 		int col = Random::Int(0, _numCols - 1);
-		if (!_tiles[row][col].HasMine())
-		{
-			_tiles[row][col].SetMine(true);
-			minesPlaced++;
-		}
+
+		if ((row == firstRow && col == firstCol) || _tiles[row][col].HasMine())
+			continue;
+
+		_tiles[row][col].SetMine(true);
+		minesPlaced++;
 	}
 }
 void Board::SetAdjacentTiles()
