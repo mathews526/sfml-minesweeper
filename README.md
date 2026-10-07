@@ -28,12 +28,26 @@ Built with an object-oriented design in C++, separating game logic, rendering, a
 - `Counter`: tracks and displays the remaining mine count
 - `TextureManager`: handles loading and sharing of sprite textures
 
-## How to Run
+## Getting Started
+
+### Prerequisites
+Download and extract [SFML 2.5.1 for Visual C++](https://www.sfml-dev.org/download/sfml/2.5.1/).
+
+### Installation
 
 1. Clone the repo
-2. Open the project in Visual Studio
-3. Make sure SFML is linked (see [SFML 2.5 setup docs](https://www.sfml-dev.org/tutorials/2.5/start-vc.php) if needed)
-4. Build and run
+```bash
+   git clone https://github.com/mathews526/sfml-minesweeper.git
+```
+2. **Open the project:**
+   Open `SFML-Minesweeper.sln` in Visual Studio.
+3. **Configure SFML Paths:**
+   Right-click the project in **Solution Explorer** and select **Properties**:
+   - **C/C++ > General > Additional Include Directories**: Add the path to your SFML `include/` folder (e.g., `C:\SFML-2.5.1\include`).
+   - **Linker > General > Additional Library Directories**: Add the path to your SFML `lib/` folder (e.g., `C:\SFML-2.5.1\lib`).
+4. **Build & Run:**
+   Select your build configuration (**Debug** or **Release**) and build the project (`F5`).
 
+> **Note on Static Linking:** This project links SFML statically (`SFML_STATIC`). The library code is compiled directly into the executable using static libraries (`sfml-*-s.lib`) and native Windows dependencies (`opengl32.lib`, `winmm.lib`, `gdi32.lib`). **No SFML `.dll` files are required in the output folder to run the application.**
 ## License
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
