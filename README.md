@@ -1,4 +1,5 @@
 # SFML Minesweeper
+
 A GUI-based implementation of the classic puzzle game Minesweeper, built in C++ using SFML (Simple and Fast Multimedia Library).
 
 <img width="450" alt="Minesweeper Demo Gif" src="https://github.com/user-attachments/assets/8cc16414-01b2-4ba1-9b0c-6a54d970c2c6" />
@@ -49,5 +50,6 @@ Download and extract [SFML 2.5.1 for Visual C++](https://www.sfml-dev.org/downlo
    Select your build configuration (**Debug** or **Release**) and build the project (`F5`).
 
 > **Note on Static Linking:** This project links SFML statically (`SFML_STATIC`). The library code is compiled directly into the executable using static libraries (`sfml-*-s.lib`) and native Windows dependencies (`opengl32.lib`, `winmm.lib`, `gdi32.lib`). **No SFML `.dll` files are required in the output folder to run the application.**
+> 
 ## License
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
