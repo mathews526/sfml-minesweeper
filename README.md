@@ -16,9 +16,8 @@ A GUI-based implementation of the classic puzzle game Minesweeper, built in C++ 
 
 ## Built With
 
-- C++11 (or higher)
+- C++14 (or higher)
 - SFML 2.5.1 (rendering, input, and window management)
-- Visual Studio
 
 ## Architecture
 
