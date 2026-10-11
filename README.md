@@ -16,9 +16,9 @@ A GUI-based implementation of the classic puzzle game Minesweeper, built in C++ 
 
 ## Built With
 
-- **C++11** (or higher)
-- **SFML 2.5.1** (rendering, input, and window management)
-- **Visual Studio**
+- C++11 (or higher)
+- SFML 2.5.1 (rendering, input, and window management)
+- Visual Studio
 
 ## Architecture
 
@@ -32,7 +32,8 @@ Built with an object-oriented design in C++, separating game logic, rendering, a
 ## Getting Started
 
 ### Prerequisites
-Download and extract [SFML 2.5.1 for Visual C++](https://www.sfml-dev.org/download/sfml/2.5.1/).
+- Windows with Visual Studio
+- Download and extract [SFML 2.5.1 for Visual C++](https://www.sfml-dev.org/download/sfml/2.5.1/).
 
 ### Installation
 
